@@ -1,0 +1,52 @@
+[
+  {
+    "k": 2,
+    "suppression_rate_pct": 0.33,
+    "retained_records": 32455,
+    "accuracy": 0.8261,
+    "f1": 0.5758,
+    "homogeneity_risk_pct": 41.9,
+    "distinct_l_compliance_pct": 58.1,
+    "homogeneity_vulnerable_classes": 225
+  },
+  {
+    "k": 5,
+    "suppression_rate_pct": 1.56,
+    "retained_records": 32053,
+    "accuracy": 0.8261,
+    "f1": 0.5755,
+    "homogeneity_risk_pct": 31.22,
+    "distinct_l_compliance_pct": 68.78,
+    "homogeneity_vulnerable_classes": 123
+  },
+  {
+    "k": 10,
+    "suppression_rate_pct": 3.75,
+    "retained_records": 31340,
+    "accuracy": 0.8259,
+    "f1": 0.5749,
+    "homogeneity_risk_pct": 22.57,
+    "distinct_l_compliance_pct": 77.43,
+    "homogeneity_vulnerable_classes": 65
+  },
+  {
+    "k": 20,
+    "suppression_rate_pct": 7.44,
+    "retained_records": 30137,
+    "accuracy": 0.8256,
+    "f1": 0.5754,
+    "homogeneity_risk_pct": 16.83,
+    "distinct_l_compliance_pct": 83.17,
+    "homogeneity_vulnerable_classes": 34
+  },
+  {
+    "k": 50,
+    "suppression_rate_pct": 15.04,
+    "retained_records": 27665,
+    "accuracy": 0.8258,
+    "f1": 0.5766,
+    "homogeneity_risk_pct": 8.73,
+    "distinct_l_compliance_pct": 91.27,
+    "homogeneity_vulnerable_classes": 11
+  }
+]

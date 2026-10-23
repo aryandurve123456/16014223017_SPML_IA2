@@ -1,0 +1,94 @@
+[
+  {
+    "evaluated_model": "Non-Private Baseline LR",
+    "attack_accuracy": 0.4988,
+    "attack_precision": 0.4991,
+    "attack_recall": 0.6545,
+    "attack_f1": 0.5663,
+    "attack_roc_auc": 0.4955,
+    "mia_advantage": -0.0025,
+    "confusion_matrix": [
+      [
+        2792,
+        5348
+      ],
+      [
+        2812,
+        5328
+      ]
+    ],
+    "sample_counts": {
+      "members": 8140,
+      "non_members": 8140
+    }
+  },
+  {
+    "evaluated_model": "Central DP-ERM (eps=1.0)",
+    "attack_accuracy": 0.4967,
+    "attack_precision": 0.496,
+    "attack_recall": 0.4091,
+    "attack_f1": 0.4484,
+    "attack_roc_auc": 0.4954,
+    "mia_advantage": -0.0066,
+    "confusion_matrix": [
+      [
+        4756,
+        3384
+      ],
+      [
+        4810,
+        3330
+      ]
+    ],
+    "sample_counts": {
+      "members": 8140,
+      "non_members": 8140
+    }
+  },
+  {
+    "evaluated_model": "Central DP-ERM (eps=0.5)",
+    "attack_accuracy": 0.4975,
+    "attack_precision": 0.4971,
+    "attack_recall": 0.4273,
+    "attack_f1": 0.4596,
+    "attack_roc_auc": 0.4971,
+    "mia_advantage": -0.0049,
+    "confusion_matrix": [
+      [
+        4622,
+        3518
+      ],
+      [
+        4662,
+        3478
+      ]
+    ],
+    "sample_counts": {
+      "members": 8140,
+      "non_members": 8140
+    }
+  },
+  {
+    "evaluated_model": "Central DP-SGD (Opacus, noise=1.2)",
+    "attack_accuracy": 0.4953,
+    "attack_precision": 0.495,
+    "attack_recall": 0.4652,
+    "attack_f1": 0.4796,
+    "attack_roc_auc": 0.4948,
+    "mia_advantage": -0.0095,
+    "confusion_matrix": [
+      [
+        4276,
+        3864
+      ],
+      [
+        4353,
+        3787
+      ]
+    ],
+    "sample_counts": {
+      "members": 8140,
+      "non_members": 8140
+    }
+  }
+]

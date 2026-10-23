@@ -1,0 +1,61 @@
+{
+  "raw_baseline": {
+    "representation": "Raw Full Features (105-d)",
+    "utility_y_f1": 0.6513,
+    "adversary_s_leakage": 1.0
+  },
+  "standard_pca": [
+    {
+      "dimension": 2,
+      "utility_y_f1": 0.4483,
+      "adversary_s_leakage": 0.9997
+    },
+    {
+      "dimension": 4,
+      "utility_y_f1": 0.5493,
+      "adversary_s_leakage": 0.9999
+    },
+    {
+      "dimension": 8,
+      "utility_y_f1": 0.5555,
+      "adversary_s_leakage": 1.0
+    },
+    {
+      "dimension": 16,
+      "utility_y_f1": 0.5916,
+      "adversary_s_leakage": 1.0
+    },
+    {
+      "dimension": 24,
+      "utility_y_f1": 0.608,
+      "adversary_s_leakage": 1.0
+    }
+  ],
+  "compressive_privacy": [
+    {
+      "dimension": 2,
+      "utility_y_f1": 0.5081,
+      "adversary_s_leakage": 0.5
+    },
+    {
+      "dimension": 4,
+      "utility_y_f1": 0.5327,
+      "adversary_s_leakage": 0.5
+    },
+    {
+      "dimension": 8,
+      "utility_y_f1": 0.5484,
+      "adversary_s_leakage": 0.5
+    },
+    {
+      "dimension": 16,
+      "utility_y_f1": 0.5753,
+      "adversary_s_leakage": 0.5
+    },
+    {
+      "dimension": 24,
+      "utility_y_f1": 0.5846,
+      "adversary_s_leakage": 0.5
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "dataset_name": "UCI Adult Census Income Dataset",
+  "official_url": "https://archive.ics.uci.edu/dataset/2/adult",
+  "doi": "https://doi.org/10.24432/C5XW20",
+  "citation": "Kohavi, R. (1996). Scaling Up the Accuracy of Naive-Bayes Classifiers: A Decision-Tree Hybrid. KDD-96.",
+  "license": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+  "sha256_checksums": {
+    "adult.data": "5b00264637dbfec36bdeaab5676b0b309ff9eb788d63554ca0a249491c86603d",
+    "adult.test": "a2a9044bc167a35b2361efbabec64e89d69ce82d9790d2980119aac5fd7e9c05",
+    "adult.names": "c248284c0b5de30c9e1958d6cdd168a34a654758b620e68f46aefa83fc0a576a"
+  },
+  "file_sizes_bytes": {
+    "adult.data": 3974305,
+    "adult.test": 2003153
+  },
+  "raw_record_counts": {
+    "train_rows": 32561,
+    "test_rows": 16281,
+    "total_rows": 48842
+  },
+  "attributes": {
+    "total_columns": 15,
+    "continuous_count": 6,
+    "categorical_count": 8,
+    "target": "income"
+  },
+  "target_distribution": {
+    "train": {
+      "<=50K": 24720,
+      ">50K": 7841
+    },
+    "test": {
+      "<=50K": 12435,
+      ">50K": 3846
+    },
+    "combined": {
+      "<=50K": 37155,
+      ">50K": 11687
+    }
+  },
+  "missing_values": {
+    "train": {
+      "workclass": 1836,
+      "occupation": 1843,
+      "native-country": 583
+    },
+    "test": {
+      "workclass": 963,
+      "occupation": 966,
+      "native-country": 274
+    }
+  },
+  "duplicates": {
+    "train_duplicates": 24,
+    "test_duplicates": 5
+  }
+}

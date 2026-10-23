@@ -1,0 +1,29 @@
+{
+  "raw_train_shape": [
+    32561,
+    15
+  ],
+  "raw_test_shape": [
+    16281,
+    15
+  ],
+  "processed_train_shape": [
+    32537,
+    105
+  ],
+  "processed_test_shape": [
+    16281,
+    105
+  ],
+  "feature_count_total": 105,
+  "numerical_features_count": 6,
+  "categorical_encoded_count": 99,
+  "scaling_range": [
+    -1.0,
+    1.0
+  ],
+  "positive_class_ratio_train": 0.2409257153394597,
+  "positive_class_ratio_test": 0.23622627602727106,
+  "train_only_fitting": true,
+  "duplicates_removed_from_train": 24
+}

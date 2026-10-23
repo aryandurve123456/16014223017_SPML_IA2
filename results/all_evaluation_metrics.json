@@ -1,0 +1,669 @@
+{
+  "benchmarking_metadata": {
+    "execution_time_sec": 32.77,
+    "seeds_evaluated": [
+      42,
+      101,
+      2024
+    ],
+    "target_delta": 1e-05,
+    "dataset_rows_train": 32537,
+    "dataset_rows_test": 16281,
+    "feature_dimension": 105
+  },
+  "baseline_lr": {
+    "model_name": "Baseline Logistic Regression",
+    "privacy_mechanism": "None (Non-Private)",
+    "epsilon": null,
+    "delta": null,
+    "train_time_sec": 0.3551,
+    "inference_time_sec": 0.0026,
+    "roc_auc": 0.9035,
+    "default_threshold_0.5": {
+      "accuracy": 0.8511,
+      "precision": 0.7289,
+      "recall": 0.5887,
+      "f1": 0.6513,
+      "confusion_matrix": [
+        [
+          11593,
+          842
+        ],
+        [
+          1582,
+          2264
+        ]
+      ]
+    },
+    "calibrated_threshold": {
+      "threshold_value": 0.3675,
+      "accuracy": 0.8415,
+      "precision": 0.6486,
+      "recall": 0.7176,
+      "f1": 0.6814,
+      "confusion_matrix": [
+        [
+          10940,
+          1495
+        ],
+        [
+          1086,
+          2760
+        ]
+      ]
+    }
+  },
+  "baseline_mlp": {
+    "model_name": "Baseline Multilayer Perceptron (Non-linear)",
+    "privacy_mechanism": "None (Non-Private)",
+    "train_time_sec": 2.0296,
+    "accuracy": 0.8491,
+    "precision": 0.73,
+    "recall": 0.5736,
+    "f1": 0.6424,
+    "roc_auc": 0.9006,
+    "confusion_matrix": [
+      [
+        11619,
+        816
+      ],
+      [
+        1640,
+        2206
+      ]
+    ]
+  },
+  "central_dp_erm": [
+    {
+      "mechanism": "Central DP-ERM (Output Perturbation)",
+      "epsilon": 0.1,
+      "delta": 1e-05,
+      "roc_auc_mean": 0.8537,
+      "roc_auc_std": 0.0017,
+      "accuracy_mean": 0.789,
+      "accuracy_std": 0.021,
+      "f1_mean": 0.5786,
+      "f1_std": 0.035,
+      "precision_mean": 0.5718,
+      "recall_mean": 0.6284,
+      "seeds_tested": 3
+    },
+    {
+      "mechanism": "Central DP-ERM (Output Perturbation)",
+      "epsilon": 0.5,
+      "delta": 1e-05,
+      "roc_auc_mean": 0.8617,
+      "roc_auc_std": 0.0006,
+      "accuracy_mean": 0.8017,
+      "accuracy_std": 0.008,
+      "f1_mean": 0.6048,
+      "f1_std": 0.0067,
+      "precision_mean": 0.5739,
+      "recall_mean": 0.6434,
+      "seeds_tested": 3
+    },
+    {
+      "mechanism": "Central DP-ERM (Output Perturbation)",
+      "epsilon": 1.0,
+      "delta": 1e-05,
+      "roc_auc_mean": 0.8621,
+      "roc_auc_std": 0.0003,
+      "accuracy_mean": 0.8036,
+      "accuracy_std": 0.0033,
+      "f1_mean": 0.6053,
+      "f1_std": 0.0048,
+      "precision_mean": 0.5766,
+      "recall_mean": 0.6379,
+      "seeds_tested": 3
+    },
+    {
+      "mechanism": "Central DP-ERM (Output Perturbation)",
+      "epsilon": 2.0,
+      "delta": 1e-05,
+      "roc_auc_mean": 0.8623,
+      "roc_auc_std": 0.0001,
+      "accuracy_mean": 0.8045,
+      "accuracy_std": 0.0017,
+      "f1_mean": 0.6055,
+      "f1_std": 0.0024,
+      "precision_mean": 0.5787,
+      "recall_mean": 0.635,
+      "seeds_tested": 3
+    },
+    {
+      "mechanism": "Central DP-ERM (Output Perturbation)",
+      "epsilon": 5.0,
+      "delta": 1e-05,
+      "roc_auc_mean": 0.8623,
+      "roc_auc_std": 0.0001,
+      "accuracy_mean": 0.8045,
+      "accuracy_std": 0.0007,
+      "f1_mean": 0.6049,
+      "f1_std": 0.0008,
+      "precision_mean": 0.5789,
+      "recall_mean": 0.6335,
+      "seeds_tested": 3
+    }
+  ],
+  "central_dp_sgd": [
+    {
+      "model_name": "DP-SGD Logistic Regression (noise=0.8)",
+      "paradigm": "Central DP (Differentially Private SGD via Opacus)",
+      "noise_multiplier": 0.8,
+      "max_grad_norm": 1.0,
+      "batch_size": 256,
+      "epochs": 5,
+      "sampling_ratio": 0.007868,
+      "target_delta": 1e-05,
+      "final_epsilon": 2.0902,
+      "train_time_sec": 2.8401,
+      "accuracy": 0.8346,
+      "precision": 0.7216,
+      "recall": 0.488,
+      "f1": 0.5823,
+      "roc_auc": 0.885,
+      "confusion_matrix": [
+        [
+          11711,
+          724
+        ],
+        [
+          1969,
+          1877
+        ]
+      ],
+      "epoch_accounting": [
+        {
+          "epoch": 1,
+          "epsilon_spent": 1.3177,
+          "delta": 1e-05,
+          "avg_loss": 0.5197
+        },
+        {
+          "epoch": 2,
+          "epsilon_spent": 1.5732,
+          "delta": 1e-05,
+          "avg_loss": 0.4038
+        },
+        {
+          "epoch": 3,
+          "epsilon_spent": 1.7685,
+          "delta": 1e-05,
+          "avg_loss": 0.4063
+        },
+        {
+          "epoch": 4,
+          "epsilon_spent": 1.9373,
+          "delta": 1e-05,
+          "avg_loss": 0.4044
+        },
+        {
+          "epoch": 5,
+          "epsilon_spent": 2.0902,
+          "delta": 1e-05,
+          "avg_loss": 0.4043
+        }
+      ]
+    },
+    {
+      "model_name": "DP-SGD Logistic Regression (noise=1.2)",
+      "paradigm": "Central DP (Differentially Private SGD via Opacus)",
+      "noise_multiplier": 1.2,
+      "max_grad_norm": 1.0,
+      "batch_size": 256,
+      "epochs": 5,
+      "sampling_ratio": 0.007868,
+      "target_delta": 1e-05,
+      "final_epsilon": 0.8029,
+      "train_time_sec": 2.7977,
+      "accuracy": 0.8342,
+      "precision": 0.7207,
+      "recall": 0.4865,
+      "f1": 0.5809,
+      "roc_auc": 0.8848,
+      "confusion_matrix": [
+        [
+          11710,
+          725
+        ],
+        [
+          1975,
+          1871
+        ]
+      ],
+      "epoch_accounting": [
+        {
+          "epoch": 1,
+          "epsilon_spent": 0.3882,
+          "delta": 1e-05,
+          "avg_loss": 0.5196
+        },
+        {
+          "epoch": 2,
+          "epsilon_spent": 0.5226,
+          "delta": 1e-05,
+          "avg_loss": 0.4042
+        },
+        {
+          "epoch": 3,
+          "epsilon_spent": 0.6292,
+          "delta": 1e-05,
+          "avg_loss": 0.407
+        },
+        {
+          "epoch": 4,
+          "epsilon_spent": 0.7209,
+          "delta": 1e-05,
+          "avg_loss": 0.405
+        },
+        {
+          "epoch": 5,
+          "epsilon_spent": 0.8029,
+          "delta": 1e-05,
+          "avg_loss": 0.4052
+        }
+      ]
+    },
+    {
+      "model_name": "DP-SGD Logistic Regression (noise=2.0)",
+      "paradigm": "Central DP (Differentially Private SGD via Opacus)",
+      "noise_multiplier": 2.0,
+      "max_grad_norm": 1.0,
+      "batch_size": 256,
+      "epochs": 5,
+      "sampling_ratio": 0.007868,
+      "target_delta": 1e-05,
+      "final_epsilon": 0.3856,
+      "train_time_sec": 2.6603,
+      "accuracy": 0.8338,
+      "precision": 0.7182,
+      "recall": 0.4878,
+      "f1": 0.581,
+      "roc_auc": 0.8844,
+      "confusion_matrix": [
+        [
+          11699,
+          736
+        ],
+        [
+          1970,
+          1876
+        ]
+      ],
+      "epoch_accounting": [
+        {
+          "epoch": 1,
+          "epsilon_spent": 0.1739,
+          "delta": 1e-05,
+          "avg_loss": 0.5194
+        },
+        {
+          "epoch": 2,
+          "epsilon_spent": 0.2433,
+          "delta": 1e-05,
+          "avg_loss": 0.4052
+        },
+        {
+          "epoch": 3,
+          "epsilon_spent": 0.2977,
+          "delta": 1e-05,
+          "avg_loss": 0.4085
+        },
+        {
+          "epoch": 4,
+          "epsilon_spent": 0.3442,
+          "delta": 1e-05,
+          "avg_loss": 0.4064
+        },
+        {
+          "epoch": 5,
+          "epsilon_spent": 0.3856,
+          "delta": 1e-05,
+          "avg_loss": 0.407
+        }
+      ]
+    }
+  ],
+  "local_dp": [
+    {
+      "mechanism": "Local DP (Warner RR + Duchi)",
+      "epsilon": 0.1,
+      "delta": 0.0,
+      "roc_auc_mean": 0.4756,
+      "roc_auc_std": 0.0408,
+      "accuracy_mean": 0.6993,
+      "accuracy_std": 0.0307,
+      "f1_mean": 0.1044,
+      "f1_std": 0.0827,
+      "precision_mean": 0.1497,
+      "recall_mean": 0.0858,
+      "seeds_tested": 3
+    },
+    {
+      "mechanism": "Local DP (Warner RR + Duchi)",
+      "epsilon": 0.5,
+      "delta": 0.0,
+      "roc_auc_mean": 0.5333,
+      "roc_auc_std": 0.0516,
+      "accuracy_mean": 0.7123,
+      "accuracy_std": 0.0339,
+      "f1_mean": 0.1348,
+      "f1_std": 0.1447,
+      "precision_mean": 0.1835,
+      "recall_mean": 0.134,
+      "seeds_tested": 3
+    },
+    {
+      "mechanism": "Local DP (Warner RR + Duchi)",
+      "epsilon": 1.0,
+      "delta": 0.0,
+      "roc_auc_mean": 0.5934,
+      "roc_auc_std": 0.0671,
+      "accuracy_mean": 0.7098,
+      "accuracy_std": 0.0418,
+      "f1_mean": 0.168,
+      "f1_std": 0.1796,
+      "precision_mean": 0.2202,
+      "recall_mean": 0.1956,
+      "seeds_tested": 3
+    },
+    {
+      "mechanism": "Local DP (Warner RR + Duchi)",
+      "epsilon": 2.0,
+      "delta": 0.0,
+      "roc_auc_mean": 0.6757,
+      "roc_auc_std": 0.0505,
+      "accuracy_mean": 0.7264,
+      "accuracy_std": 0.0242,
+      "f1_mean": 0.2257,
+      "f1_std": 0.198,
+      "precision_mean": 0.3212,
+      "recall_mean": 0.255,
+      "seeds_tested": 3
+    },
+    {
+      "mechanism": "Local DP (Warner RR + Duchi)",
+      "epsilon": 5.0,
+      "delta": 0.0,
+      "roc_auc_mean": 0.7777,
+      "roc_auc_std": 0.016,
+      "accuracy_mean": 0.7403,
+      "accuracy_std": 0.019,
+      "f1_mean": 0.4769,
+      "f1_std": 0.12,
+      "precision_mean": 0.4736,
+      "recall_mean": 0.5671,
+      "seeds_tested": 3
+    }
+  ],
+  "ppdm_k_anonymity": [
+    {
+      "k": 2,
+      "suppression_rate_pct": 0.33,
+      "retained_records": 32455,
+      "accuracy": 0.8261,
+      "f1": 0.5758,
+      "homogeneity_risk_pct": 41.9,
+      "distinct_l_compliance_pct": 58.1,
+      "homogeneity_vulnerable_classes": 225
+    },
+    {
+      "k": 5,
+      "suppression_rate_pct": 1.56,
+      "retained_records": 32053,
+      "accuracy": 0.8261,
+      "f1": 0.5755,
+      "homogeneity_risk_pct": 31.22,
+      "distinct_l_compliance_pct": 68.78,
+      "homogeneity_vulnerable_classes": 123
+    },
+    {
+      "k": 10,
+      "suppression_rate_pct": 3.75,
+      "retained_records": 31340,
+      "accuracy": 0.8259,
+      "f1": 0.5749,
+      "homogeneity_risk_pct": 22.57,
+      "distinct_l_compliance_pct": 77.43,
+      "homogeneity_vulnerable_classes": 65
+    },
+    {
+      "k": 20,
+      "suppression_rate_pct": 7.44,
+      "retained_records": 30137,
+      "accuracy": 0.8256,
+      "f1": 0.5754,
+      "homogeneity_risk_pct": 16.83,
+      "distinct_l_compliance_pct": 83.17,
+      "homogeneity_vulnerable_classes": 34
+    },
+    {
+      "k": 50,
+      "suppression_rate_pct": 15.04,
+      "retained_records": 27665,
+      "accuracy": 0.8258,
+      "f1": 0.5766,
+      "homogeneity_risk_pct": 8.73,
+      "distinct_l_compliance_pct": 91.27,
+      "homogeneity_vulnerable_classes": 11
+    }
+  ],
+  "compressive_privacy": {
+    "raw_baseline": {
+      "representation": "Raw Full Features (105-d)",
+      "utility_y_f1": 0.6513,
+      "adversary_s_leakage": 1.0
+    },
+    "standard_pca": [
+      {
+        "dimension": 2,
+        "utility_y_f1": 0.4483,
+        "adversary_s_leakage": 0.9997
+      },
+      {
+        "dimension": 4,
+        "utility_y_f1": 0.5493,
+        "adversary_s_leakage": 0.9999
+      },
+      {
+        "dimension": 8,
+        "utility_y_f1": 0.5555,
+        "adversary_s_leakage": 1.0
+      },
+      {
+        "dimension": 16,
+        "utility_y_f1": 0.5916,
+        "adversary_s_leakage": 1.0
+      },
+      {
+        "dimension": 24,
+        "utility_y_f1": 0.608,
+        "adversary_s_leakage": 1.0
+      }
+    ],
+    "compressive_privacy": [
+      {
+        "dimension": 2,
+        "utility_y_f1": 0.5081,
+        "adversary_s_leakage": 0.5
+      },
+      {
+        "dimension": 4,
+        "utility_y_f1": 0.5327,
+        "adversary_s_leakage": 0.5
+      },
+      {
+        "dimension": 8,
+        "utility_y_f1": 0.5484,
+        "adversary_s_leakage": 0.5
+      },
+      {
+        "dimension": 16,
+        "utility_y_f1": 0.5753,
+        "adversary_s_leakage": 0.5
+      },
+      {
+        "dimension": 24,
+        "utility_y_f1": 0.5846,
+        "adversary_s_leakage": 0.5
+      }
+    ]
+  },
+  "federated_learning": {
+    "paradigm": "Federated Learning (FedAvg, 5 Simulated Heterogeneous Clients)",
+    "num_clients": 5,
+    "communication_rounds": 5,
+    "train_time_sec": 1.6461,
+    "final_accuracy": 0.7828,
+    "final_precision": 0.9354,
+    "final_recall": 0.0866,
+    "final_f1": 0.1585,
+    "final_roc_auc": 0.8939,
+    "confusion_matrix": [
+      [
+        12412,
+        23
+      ],
+      [
+        3513,
+        333
+      ]
+    ],
+    "convergence_history": [
+      {
+        "round": 1,
+        "accuracy": 0.7828,
+        "f1": 0.1585,
+        "roc_auc": 0.8939
+      },
+      {
+        "round": 2,
+        "accuracy": 0.7828,
+        "f1": 0.1585,
+        "roc_auc": 0.8939
+      },
+      {
+        "round": 3,
+        "accuracy": 0.7828,
+        "f1": 0.1585,
+        "roc_auc": 0.8939
+      },
+      {
+        "round": 4,
+        "accuracy": 0.7828,
+        "f1": 0.1585,
+        "roc_auc": 0.8939
+      },
+      {
+        "round": 5,
+        "accuracy": 0.7828,
+        "f1": 0.1585,
+        "roc_auc": 0.8939
+      }
+    ],
+    "secure_aggregation_simulation": {
+      "num_clients": 5,
+      "parameter_dimension": 105,
+      "mask_scale_sigma": 20.0,
+      "max_cancellation_error": 3.352873534367973e-14,
+      "exact_cancellation_verified": true,
+      "mean_correlation_blinded_to_raw": 0.0529,
+      "max_correlation_blinded_to_raw": 0.1626,
+      "threat_model_summary": "Protects against an honest-but-curious aggregator inspecting individual client updates. Individual client weights appear as high-variance random noise to the server."
+    }
+  },
+  "membership_inference_attack": [
+    {
+      "evaluated_model": "Non-Private Baseline LR",
+      "attack_accuracy": 0.4988,
+      "attack_precision": 0.4991,
+      "attack_recall": 0.6545,
+      "attack_f1": 0.5663,
+      "attack_roc_auc": 0.4955,
+      "mia_advantage": -0.0025,
+      "confusion_matrix": [
+        [
+          2792,
+          5348
+        ],
+        [
+          2812,
+          5328
+        ]
+      ],
+      "sample_counts": {
+        "members": 8140,
+        "non_members": 8140
+      }
+    },
+    {
+      "evaluated_model": "Central DP-ERM (eps=1.0)",
+      "attack_accuracy": 0.4967,
+      "attack_precision": 0.496,
+      "attack_recall": 0.4091,
+      "attack_f1": 0.4484,
+      "attack_roc_auc": 0.4954,
+      "mia_advantage": -0.0066,
+      "confusion_matrix": [
+        [
+          4756,
+          3384
+        ],
+        [
+          4810,
+          3330
+        ]
+      ],
+      "sample_counts": {
+        "members": 8140,
+        "non_members": 8140
+      }
+    },
+    {
+      "evaluated_model": "Central DP-ERM (eps=0.5)",
+      "attack_accuracy": 0.4975,
+      "attack_precision": 0.4971,
+      "attack_recall": 0.4273,
+      "attack_f1": 0.4596,
+      "attack_roc_auc": 0.4971,
+      "mia_advantage": -0.0049,
+      "confusion_matrix": [
+        [
+          4622,
+          3518
+        ],
+        [
+          4662,
+          3478
+        ]
+      ],
+      "sample_counts": {
+        "members": 8140,
+        "non_members": 8140
+      }
+    },
+    {
+      "evaluated_model": "Central DP-SGD (Opacus, noise=1.2)",
+      "attack_accuracy": 0.4953,
+      "attack_precision": 0.495,
+      "attack_recall": 0.4652,
+      "attack_f1": 0.4796,
+      "attack_roc_auc": 0.4948,
+      "mia_advantage": -0.0095,
+      "confusion_matrix": [
+        [
+          4276,
+          3864
+        ],
+        [
+          4353,
+          3787
+        ]
+      ],
+      "sample_counts": {
+        "members": 8140,
+        "non_members": 8140
+      }
+    }
+  ]
+}
